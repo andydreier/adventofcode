@@ -4,13 +4,11 @@ with open("input.txt", "r") as input_file:
 numbers = []
 
 for line in lines:
-    tmpNumbers = []
+    tmp = []
     for char in line:
         if char.isdigit():
-            tmpNumbers.append(char)
+            tmp.append(char)
 
-    lineNumber = f"{tmpNumbers[0]}{tmpNumbers[-1]}"
-    numbers.append(int(lineNumber))
+    numbers.append(int(f"{tmp[0]}{tmp[-1]}"))
 
-# print(' '.join(numbers))
 print(sum(numbers))
